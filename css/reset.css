@@ -1,0 +1,29 @@
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+ul {
+	margin: 0px;
+	padding: 0px;
+	left: inherit;
+}
+
+body {
+	text-align: center;
+	font-size: 14px;
+	left: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

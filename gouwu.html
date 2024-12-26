@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<style>
+	#daohang{
+		width: 100%;
+		height: 60px;
+	    background-color: #a76257;
+		text-align: center;
+		padding: 10px 0;
+		display: block;
+		unicode-bidi: isolate;
+	}
+	
+	nav{
+		width: 100%;
+		height: 60px;
+		background-color:#a76257;
+		text-align: center;
+		padding:10px 0;
+	}
+	
+	nav li{
+		display: inline-block;
+		list-style: none;
+		width: 200px;
+		text-align: center;
+	}
+	
+	a{text-decoration: none}
+	nav a{
+		display: inline-block;
+		line-height: 60px;
+		/* margin-left: 35px; */
+		color: #ffffff;
+		font-size: 25px;
+		font-family: "隶书";
+		text-align: center;
+	}
+	nav a:link,.footer a:link {
+		color:#fff
+	}
+	nav a:visited ,.footer a:visited {
+		text-decoration: double;
+	}
+	nav a:hover,.footer a:hover{
+		color:lightgoldenrodyellow;
+		
+	}
+	nav a:active,.footer a:active{
+		color:papayawhip;
+	}
+	
+	.banner {
+		width: 100%;
+	  height: 400px;
+	
+	}
+	#slideshow {
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+		position: relative;
+		
+	}
+	
+	#pre {
+		position: absolute;
+		top:350px;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		font-size: 40px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	
+	#next {
+		position: absolute;
+		top: 350px;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		font-size: 40px;
+		opacity: 0.5;
+		cursor: pointer;
+	}
+	#imglist li {
+		width: 100%;
+		position: absolute;
+		opacity: 0;
+		height: 402px;
+		left: -1px;
+		top: -6px;
+	}
+	#imglist img {
+		width: 100%;
+	}
+	
+	#dotlist {
+		position: absolute;
+		bottom: 24px;
+		width: 100px;
+		display: flex;
+		justify-content: space-between;
+		left: 460px;
+		transform: translate(-50%);
+	}
+	
+	#dotlist > li {
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		border-radius: 50%;
+		background-color: #fff;
+		opacity: 0.3;
+		cursor: pointer;
+		user-select: none;
+	}
+	
+	#imglist > li.appear,
+	#dotlist > li.appear {
+		opacity: 1;
+	}
+	nav ul {
+	  list-style: none;
+	  display: grid;
+	  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 根据容器宽度自动调整列数，每列宽度范围如上述 */
+	  padding: 0;
+	  margin-left: -70px; /* 设置合适的负值，这里以 -20px 为例，可按需调整 */
+	}
+	
+	nav ul li {
+	  text-align: center;
+	}
+	
+	nav ul li a {
+	  text-decoration: none;
+	  color: inherit;
+	}
+	
+	.footer{
+		text-align: center;
+		background-color: #a76257;
+		height: 60px;
+		color: white;
+		padding-top: 10px;
+	}
+	.footer a{
+		color: white;
+		line-height: 30px;
+		letter-spacing: 2px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.footer p{
+		line-height: 30px;
+		letter-spacing: 2px;
+	}
+	
+	
+	
+</style>
+
+
+<head>
+	<meta charset="utf-8" />
+	<title>购物车</title>
+
+	<link rel="stylesheet" type="text/css" href="css/jd.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css" />
+
+
+	<!--使用JS别忘记将其引入-->
+	<script src="js/jd.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="icon" href="./img/1117.png_860.png">
+</head>
+
+<body>
+	<header>
+		
+			<div class="left">
+				<div class="left">
+				  <div align="left"><img src="images/tubiao.png" height="100" width="auto" alt="">
+			      </div>
+			</div>
+			<div class="right">
+				<div align="right">
+				  <input type="text" placeholder="请输入关键字">
+				  <span>搜索</span></div>
+			</div>
+			<nav>
+				<ul>
+					<li class="active"><a href="shouye.html">首页</a></li>
+					<li><a href="chanpintuijian.html">产品推荐</a></li>
+					<li><a href="gouwu.html">购物车</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="zhuce.html">注册</a></li>
+				</ul>
+			</nav>
+			<div class="banner">
+				<div id="slideshow">
+					<ul id="imglist">
+						<li><img src="images/datu1.jpg" alt="" height="400"></li>
+						<li><img src="images/datu2.jpeg" alt=""height="400"></li>
+						<li><img src="images/datu3.png" alt="" height="400"></li>
+					</ul>
+					<ul id="dotlist">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<button id="pre"><</button>
+				<button id="next">></button>				
+			</div>
+		</header>
+
+
+	<!--标题开始	-->
+	<div class="title warp">
+		<h3>全部商品</h3>
+
+		<div>
+			<span id="">配送至</span>
+			<select>
+				<option>昆明</option>
+				<option>成都</option>
+				<option>重庆</option>
+				<option>广州</option>
+				<option>北京</option>
+				<option>上海</option>
+			</select>
+		</div>
+	</div>
+
+
+	<div class="tips warp">
+		<ui>
+			<li>
+				<input type="checkbox" name="fav" id="all" onclick="checkTest1(this),checkTest2()" />全选
+			</li>
+			<li>商品</li>
+			<li>单价</li>
+			<li>数量</li>
+			<li>小计</li>
+			<li>操作</li>
+		</ui>
+	</div>
+
+	<div class="info warp">
+
+		<ul>
+			<li class="info_1"><input type="checkbox" name="fav" onclick="checkTest2()" /> </li>
+			<li class="info_2"> <img src="images/guihuawei.jpg" width="83" height="79" /> </li>
+			<li class="info_3"><a>【限时大促】桂花味</a></li>
+			<li class="info_4"><a></a> </li>
+			<li class="info_5">3.5</li>
+			<li class="info_6">
+				<button onclick="checkTest3(this,1),checkTest2()">-</button>
+				<input type="text" name="" id="" value="1" />
+				<button class="bot" onclick="checkTest3(this,2),checkTest2()">+</button>
+
+			</li>
+			<li class="info_7">￥3.5</li>
+			<li>
+				
+				<a href="javascript:void(0)" onclick="checkTest4(this),checkTest2()">删除</a><br />
+				<a>已到我的关注</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="info warp">
+
+		<ul>
+			<li class="info_1"><input type="checkbox" name="fav" onclick="checkTest2()" /> </li>
+			<li class="info_2"> <img src="images/mochawei.jpg" width="80px" /> </li>
+			<li class="info_3"><a>【限时大促】抹茶味</a></li>
+			<li class="info_4"><a></a> </li>
+			<li class="info_5">3.5</li>
+			<li class="info_6">
+				<button onclick="checkTest3(this,1),checkTest2()">-</button>
+				<input type="text" name="" id="" value="1" />
+				<button class="bot" onclick="checkTest3(this,2),checkTest2()">+</button>
+
+			</li>
+			<li class="info_7">￥3.5</li>
+			<li>
+				<a href="javascript:void(0)" onclick="checkTest4(this),checkTest2()">删除</a><br />
+				<a>已到购物车</a>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="info warp">
+
+		<ul>
+			<li class="info_1"><input type="checkbox" name="fav" onclick="checkTest2()" /> </li>
+			<li class="info_2"> <img src="images/yuanwei.jpg" width="80px" /> </li>
+			<li class="info_3"><a>【限时大促】原味</a></li>
+			<li class="info_4"><a></a> </li>
+			<li class="info_5">3</li>
+			<li class="info_6">
+				<button onclick="checkTest3(this,1),checkTest2()">-</button>
+				<input type="text" name="" id="" value="1" />
+				<button class="bot" onclick="checkTest3(this,2),checkTest2()">+</button>
+
+			</li>
+			<li class="info_7">￥3</li>
+			<li>
+				<a href="javascript:void(0)" onclick="checkTest4(this),checkTest2()">删除</a><br />
+				<a>已到购物车</a>
+			</li>
+		</ul>
+
+	</div>
+
+
+	<!--结算窗口-->
+	<div class="balance warp">
+		<ul class="balance_ul1">
+			<li><input type="checkbox" name="fav" onclick="checkTest1(this),checkTest2()" />全选</li>
+			<li>删除选中商品</li>
+			<li>移到我的关注</li>
+			<li>清除下柜商品</li>
+		</ul>
+
+		<ul class="balance_ul2">
+			<li>已经选择<span id="snum">0</span>件商品</li>
+			<li>总价<span id="zongz">￥0</span></li>
+			<a href="shoukuan.html">
+			<li class="butt">去结算</li>
+			</a>
+		</ul>
+	</div>
+	
+	
+	<div class="footer">
+			<a href="about.html">关于我们</a>|<a href="mianzeshengming.html">免责声明</a>|<a href="yingsixieyi.html">隐私协议</a>|<a href="falvtiaokuan.html">法律条款</a>|<a href="zhuce.html">帮助中心</a>
+			
+		</div>
+	<script src="js/lunbo.js"></script>
+</body>
+
+</html>

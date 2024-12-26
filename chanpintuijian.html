@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品推荐</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.left li {
+  width: 130%;
+  margin-bottom: 20px;
+}
+.left .con {
+  margin-left: 20px;
+}
+.left .tit {
+  font-size: 20px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+.left .dec {
+  position: relative;
+  width: 65%;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+.left .img {
+  width:30%;
+  height: 40%;
+  border-radius: 15px;
+}
+.left .btn {
+  border: 2px solid #000;
+  padding: 10px 30px 10px 30px;
+  border-radius: 10px;
+}
+.right li {
+  margin-bottom: 80px;
+}
+.right {
+  background-color: #dac8bf;
+  width: 30%;
+  margin-left: 20px;
+  text-align: center;
+  /* height:600px; */
+}
+.right img {
+  width:100%;
+  border-radius: 15px;
+}
+.right .tit {
+  font-size: 20px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.right .dec {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.right .btn {
+  padding: 1rem 30px 10px 30px;
+  border-radius: 10px;
+  color: #fff;
+  background: #463d3d;
+  margin-bottom: 20px;
+}
+.flex{
+	width: 100%;
+	height: 100%;
+}
+ nav ul {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 根据容器宽度自动调整列数，每列宽度范围如上述 */
+     padding: 0;
+     margin-left: -70px; /* 设置合适的负值，这里以 -20px 为例，可按需调整 */
+   }
+   
+   nav ul li {
+     text-align: center;
+   }
+   
+   nav ul li a {
+     text-decoration: none;
+     color: inherit;
+   }
+
+</style>
+</head>
+
+<body>
+	
+  <header>
+		<div class="left">
+			<img src="images/tubiao.png" height="100" width="auto" alt="">
+		</div>
+		<div class="right">
+			<input type="text" placeholder="请输入关键字">
+    <span>搜索</span>
+		</div>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">首页</a></li>
+				<li class="active"><a href="chanpintuijian.html">产品推荐</a></li>
+				<li><a href="gouwu.html">购物车</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="zhuce.html">注册</a></li>
+		</ul>
+	</nav>
+	<div class="banner">
+		<div id="slideshow">
+			<ul id="imglist">
+					<li><img src="images/datu1.jpg" alt="" height="400"></li>
+					<li><img src="images/datu2.jpeg" alt=""height="400"></li>
+					<li><img src="images/datu3.png" alt="" height="400"></li>
+			</ul>
+			<ul id="dotlist">
+					<li></li>
+					<li></li>
+					<li></li>	
+			</ul>
+		</div>
+		<button id="pre"><</button>
+		<button id="next">></button>
+	</div>
+  <div class="box">
+    <div class="flex">
+      <div class="left">
+        <ul>
+          <li class="flex" width="100%">
+            <img class="img" src="images/chanpintuijian3.jpg" alt="" width="100%">
+            <div class="con">
+              <div class="tit">玫瑰口味</div>
+              <p class="dec">甄选云南高原重瓣玫瑰入馅，花瓣肉质肥嫩，鲜嫩多汁。赏花不如吃花，一咬满口花香~</p>
+			  <a href="gouwu.html">
+              <span class="btn">了解更多</span>
+			  </a>
+            </div>
+          </li>
+          <li class="flex">
+            <img class="img" src="images/chanpintuijian4.jpg" alt="">
+            <div class="con">
+              <div class="tit">茉莉口味</div>
+              <p class="dec">没吃过的新口味，淡而有味，经久不厌，一个懂你的眼神，更比无数的安慰！！！</p>
+			  <a href="gouwu.html">
+              <span class="btn">了解更多</span>
+			  </a>
+            </div>
+          </li>
+          <li class="flex">
+            <img class="img" src="images/chanpintuijian5.jpg" alt="">
+            <div class="con">
+              <div class="tit">紫薯口味</div>
+              <p class="dec">紫薯与小麦糅合，鲜甜交融，色泽深沉，软糯香酥~</p>
+			  <a href="gouwu.html">
+              <span class="btn">了解更多</span>
+			  </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right">
+        <ul>
+          <li>
+            <div class="tit">本周最佳</div>
+            <img src="images/chanpintuijian6.jpg" alt="">
+            <p class="dec">一口下去，抹茶和玫瑰的清香交融，自然而美好</p>
+			<a href="gouwu.html">
+            <span class="btn">立即购买</span>
+			</a>
+          </li>
+          <li>
+            <div class="tit">本月最佳</div>
+            <img src="images/chanpintuijian2.jpg" alt="">
+            <p class="dec">浓而不苦，香而不烈，略带果味，只有吃过才知道</p>
+			<a href="gouwu.html">
+            <span class="btn">立即购买</span>
+			</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="footer">
+		<a href="about.html">关于我们</a>|<a href="mianzeshengming.html">免责声明</a>|<a href="yingsixieyi.html">隐私协议</a>|<a href="falvtiaokuan.html">法律条款</a>|<a href="zhuce.html">帮助中心</a>
+		
+	</div>
+  <script src="js/lunbo.js"></script>
+</body>
+</html>

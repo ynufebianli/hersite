@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			.title {
+				width: 100%;
+				overflow: hidden;
+				text-align: center;
+				margin-top: 14px;
+				border-radius: 10px;
+			}
+
+			.title span {
+				display: inline-block;
+				padding: 10px 50px;
+				background: #a76257;
+				font-size: 16px;
+				font-weight: bold;
+				color: #FFF;
+			}
+
+			.pz {
+				width: 100%;
+				overflow: hidden;
+			}
+
+			.pz li {
+				width: 238px;
+				height: 270px;
+				float: left;
+				margin: 20px 0 10px 10px;
+				text-align: center;
+				color: #333;
+			}
+
+			.pz li img {
+				width: 100%;
+				height: 162px;
+			}
+
+			.pz li em {
+				width: 232px;
+				border: 3px solid #fff;
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			 .pz li:hover em {
+				border: 3px solid #a76257;
+			} 
+
+			.price {
+	width: 130px;
+	color: red;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 6px;
+	height: 20px;
+			}
+			
+			.adv{
+				position: absolute;
+				z-index: 9;
+				width: 900px;
+				height: 650px;
+				top: 20%;
+				left: 20%;
+				bottom: 0px;
+				right: 20%;
+				margin: 0 auto;
+				background-color: #333;
+			}
+			
+			.adv-img{
+				width: 900px;
+				height: 650px;
+				margin:0 auto;
+			}
+			.cart-btn {
+			    color: green;
+			    text-decoration: none;
+			    margin-left: 5px;
+			}
+			.fa {
+			    font-size: 16px;
+			}
+			nav ul {
+			  list-style: none;
+			  display: grid;
+			  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 根据容器宽度自动调整列数，每列宽度范围如上述 */
+			  padding: 0;
+			  margin-left: -70px; /* 设置合适的负值，这里以 -20px 为例，可按需调整 */
+			}
+			
+			nav ul li {
+			  text-align: center;
+			}
+			
+			nav ul li a {
+			  text-decoration: none;
+			  color: inherit;
+			}
+		
+		</style>
+	</head>
+
+	<body>
+		
+	
+		<header>
+			<div class="left"><img src="images/tubiao.png" height="100" width="auto" alt=""></div>
+			<div class="right">
+				<input type="text" placeholder="请输入关键字">
+				<span>搜索</span>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li class="active"><a href="shouye.html">首页</a></li>
+				<li><a href="chanpintuijian.html">产品推荐</a></li>
+				<li><a href="gouwu.html">购物车</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="zhuce.html">注册</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<div id="slideshow">
+				<ul id="imglist">
+					<li><img src="images/datu1.jpg" alt="" height="400"></li>
+					<li><img src="images/datu2.jpeg" alt=""height="400"></li>
+					<li><img src="images/datu3.png" alt="" height="400"></li>
+				</ul>
+				<ul id="dotlist">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<button id="pre"><</button>
+			<button id="next">></button>				
+		</div>
+
+		<div class="box">
+			<div class="mainbox">
+				<div class="title"><span>经典推荐</span></div>
+				<div class="pz">
+					<ul>
+						<li>
+							<em><img src="images/yuanwei.jpg"></em>
+							<div class="price"><del>原价￥3</del> 会员价￥2.7</div>
+							原味鲜花饼
+							 <a href="gouwu.html" class="cart-btn">
+							        <i class="fa fa-shopping-cart"></i>
+							    </a >
+
+						</li>
+						<li>
+							<em><img src="images/guihuawei.jpg"></em>
+						  <div class="price"><del>原价￥3.5 </del> &nbsp;会员价￥2.9</div>
+						  桂花鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+
+						</li>
+						<li>
+							<em><img src="images/mochawei.jpg"></em>
+						  <div class="price"><del>原价￥3.5</del>  会员价￥2.9</div>
+						  抹茶鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+
+						</li>
+						<li>
+							<em><img src="images/caomeiwei.jpg"></em>
+						  <div class="price"><del>原价￥3.5</del>   会员价￥2.9</div>
+					  草莓鲜花饼
+					   <a href="gouwu.html" class="cart-btn">
+					          <i class="fa fa-shopping-cart"></i>
+					      </a >
+					  </li>
+
+						<li>
+							<em><img src="images/zishu.jpg"></em>
+						  <div class="price"><del>原价￥4.5</del>  会员价￥3</div>
+						  紫薯鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+						  </li>
+						<li>
+							<em><img src="images/heizaomeigui.jpg"></em>
+						  <div class="price"><del>原价￥6</del>  会员价￥5.5</div>
+						  黑枣玫瑰鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+
+					  </li>
+						<li>
+							<em><img src="images/shanzhameigui.jpg"></em>
+						  <div class="price"><del>原价￥6</del> 会员价￥5.5</div>
+						  山楂玫瑰鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+
+						</li>
+						<li>
+							<em><img src="images/liulianwei.jpg"></em>
+						  <div class="price"><del>原价7</del> 会员价6.5</div>
+						  榴莲鲜花饼
+						   <a href="gouwu.html" class="cart-btn">
+						          <i class="fa fa-shopping-cart"></i>
+						      </a >
+						</li>
+						
+						<li>
+							<em><img src="images/moli.jpg"></em>
+							<div class="price"><del>原价￥3.5</del> 会员价￥2.9</div>
+							茉莉鲜花饼
+							 <a href="gouwu.html" class="cart-btn">
+							        <i class="fa fa-shopping-cart"></i>
+							    </a >
+						</li>
+						
+						<li>
+							<em><img src="images/qiaoxiang.jpg"></em>
+							<div class="price"><del>原价￥3</del> 会员价￥2.7</div>
+							侨香玫瑰鲜花饼
+							 <a href="gouwu.html" class="cart-btn">
+							        <i class="fa fa-shopping-cart"></i>
+							    </a >
+						
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<a href="about.html">关于我们</a>|<a href="mianzeshengming.html">免责声明</a>|<a href="yingsixieyi.html">隐私协议</a>|<a href="falvtiaokuan.html">法律条款</a>|<a href="zhuce.html">帮助中心</a>
+			
+		</div>
+		<script src="js/lunbo.js"></script>
+	</body>
+</html>

@@ -1,0 +1,330 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.flex {
+	display: flex;
+}
+body {
+	background: white;
+}
+ul,ul li,ol li,tr td,dl,dd{ 
+	list-style-type:none; 
+	margin:0; 
+	padding:0; 
+}
+header {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background-color: white;
+}
+header a {
+  color: #007034;
+}
+header a:hover {
+  color: #00D362;
+}
+header .left {
+  float: left;
+  width: 400px;
+  height: 100%;
+
+}
+header .right {
+	float: right;
+	position: absolute;
+	right: 20px;
+}
+
+header input {
+  float: left;
+  padding: 5px;
+  width: 65%;
+  height:20px;
+  border: 2px solid #a76257;
+}
+header input::placeholder {
+  color: #a76257;
+}
+header span {
+  float: left; 
+  width: 50px;
+  height:34px;
+  line-height: 34px;
+  color: #fff;
+  background: #a76257;
+  text-align: center;
+}
+.banner {
+	width: 100%;
+  height: 400px;
+
+}
+#slideshow {
+	width: 100%;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+#pre {
+	position: absolute;
+	top:350px;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 40px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#next {
+	position: absolute;
+	top: 350px;
+	right: 0;
+	width: 50px;
+	height: 50px;
+	font-size: 40px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+#imglist li {
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+	height: 402px;
+	left: -1px;
+	top: -6px;
+}
+#imglist img {
+	width: 100%;
+}
+
+#dotlist {
+	position: absolute;
+	bottom: 24px;
+	width: 100px;
+	display: flex;
+	justify-content: space-between;
+	left: 460px;
+	transform: translate(-50%);
+}
+
+#dotlist > li {
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.3;
+	cursor: pointer;
+	user-select: none;
+}
+
+#imglist > li.appear,
+#dotlist > li.appear {
+	opacity: 1;
+}
+
+
+nav{
+	width: 100%;
+	height: 60px;
+	background-color:#a76257;
+	text-align: center;
+	padding:10px 0;
+}
+
+nav li{
+	display: inline-block;
+	list-style: none;
+	width: 200px;
+	text-align: center;
+}
+
+a{text-decoration: none}
+nav a{
+	display: inline-block;
+	line-height: 60px;
+	/* margin-left: 35px; */
+	color: #ffffff;
+	font-size: 25px;
+	font-family: "隶书";
+	text-align: center;
+}
+nav a:link,.footer a:link {
+	color:#fff
+}
+nav a:visited ,.footer a:visited {
+	text-decoration: double;
+}
+nav a:hover,.footer a:hover{
+	color:lightgoldenrodyellow;
+	
+}
+nav a:active,.footer a:active{
+	color:papayawhip;
+}
+
+.active {
+	width: 200px;
+	border: 2px solid #fff88c;
+}
+
+.box{ 
+	width:100%;
+	padding:12px; 
+	overflow:hidden;
+	/* text-align: center; */
+	margin:0 auto;
+}
+.footer{
+	text-align: center;
+	background-color: #a76257;
+	height: 60px;
+	color: white;
+	padding-top: 10px;
+}
+.footer a{
+	color: white;
+	line-height: 30px;
+	letter-spacing: 2px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.footer p{
+	line-height: 30px;
+	letter-spacing: 2px;
+}
+
+.login-box {
+	position: absolute;
+	top: 1035px;
+	left: 258px;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	padding: 40px;
+	background: rgba(0, 0, 0, .8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+	border-radius: 10px;
+		}
+
+		.login-box h2 {
+			margin: 0 0 30px;
+			padding: 0;
+			text-align: center;
+			color: #fff;
+		}
+
+		.login-box .login-field {
+			position: relative;
+		}
+
+		.login-box .login-field input {
+			width: 100%;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #fff;
+			margin-bottom: 30px;
+			border: none;
+			border-bottom: 1px solid #fff;
+			outline: none;
+			background: transparent;
+		}
+
+		.login-box .login-field label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			letter-spacing: 1px;
+			padding: 10px 0;
+			font-size: 16px;
+			color: #fff;
+			pointer-events: none;
+			transition: .5s;
+		}
+
+		.login-box .login-field input:focus~label,
+		.login-box .login-field input:valid~label {
+			top: -23px;
+			left: 0;
+			color: aqua;
+			font-size: 12px;
+		}
+
+		.login-box button {
+			background: transparent;
+			border: none;
+			outline: none;
+			color: #fff;
+			background: #03a9f4;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		input {
+			background: transparent;
+			border: none;
+			outline: none;
+			color: #fff;
+			background: #03a9f4;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		input:hover {
+			background-color: rgb(27, 50, 168);
+		}
+
+		input:visited {
+			color: aliceblue;
+		}
+
+		.login-box button:hover {
+			background-color: skyblue;
+		}
+	</style>
+</head>
+
+<body style="background-color: darkgray;">
+
+	<div class="login-box">
+		<h2>登录</h2>
+		<form>
+			<div class="login-field">
+				<input type="text" id="name" name="" maxlength="10" required />
+				<label>用户名</label>
+			</div>
+			<div class="login-field">
+				<input type="password" id="pwd" name="" maxlength="6" required />
+				<label>密码</label>
+			</div>
+
+			<button type="submit" onclick="confime()">提交</button>
+
+
+		</form>
+	</div>
+
+
+
+</body>
+<script>
+	function confime() {
+		var sname = document.getElementById("name").value
+		var spwd = document.getElementById("pwd").value
+		if (sname == "110" && spwd == "123456") {
+			window.open("./index.html")
+			// window.location.href='active.html'
+		}
+		else {
+			alert("用户名或密码错误!");
+		}
+
+	}

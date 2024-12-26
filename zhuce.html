@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="stylesheet" href="css/style.css">
+
+		<style>
+			.all {
+				width: 100%;
+				height: 600px;
+				margin: auto;
+
+			}
+
+			.login_area {
+				position: absolute;
+				right: 400px;
+				width: 370px;
+				margin-top: 30px;
+				height: 500px;
+				padding: 35px 35px 10px;
+				background-color: white;
+				opacity: 90%;
+				border-radius: 5px;
+			}
+
+
+
+			#login_button {
+				width: 280px;
+				height: 45px;
+				position: relative;
+				display: block;
+				line-height: 45px;
+				margin-top: 30px;
+				background: #00ff00;
+				border-width: 0;
+				border-radius: 15px;
+				font-size: 20px
+			}
+
+			#login_button a {
+				color: aliceblue;
+				text-decoration: none;
+			}
+
+			#login_button a:hover {
+				color: #00053D;
+			}
+
+			.foot {
+				padding-top: 30px;
+				padding-left: 100px;
+				font-size: 12px;
+				color: #7F7F7F;
+			}
+
+			.img-dotu {
+				position: absolute;
+				top: 2px;
+				z-index: 9;
+				width: 100px;
+				height: 100px;
+			}
+			  .shell {
+					            width: fit-content; /* 根据内容自适应宽度，使其变小紧凑 */
+					            margin: 0 auto; /* 实现水平居中 */
+					            padding: 20px; /* 根据需要添加内边距，让内容看着更舒适 */
+					            background-color: #f9f9f9; /* 根据喜好设置背景色，这里只是示例 */
+					            border-radius: 5px; /* 添加圆角，美化外观，可选 */
+					            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 添加阴影，增强层次感，可选 */
+					            max-width: 700px; /* 设置一个最大宽度，避免在大屏幕上过度拉伸，可按需调整数值 */
+					            min-width: 575px; /* 设置一个最小宽度，防止太窄影响显示，可按需调整数值 */
+					        }
+				
+				input[type="text"],
+				input[type="password"] {
+				    width: 100%;
+				    height: 50px;
+				    margin: 10px 0;
+				    box-sizing: border-box;
+				    color: rgb(0, 0, 0);
+				    border: 5px solid transparent;
+				    background: rgba(255, 255, 255, .5);
+				    border-radius: 100px;
+				    padding: 5px 20px 0 20px;
+				    transition: 0.3s;
+				    font-size: 18px;
+				    outline: none
+				}
+				
+				
+				
+				input[type="button"] {
+				    width: 100%;
+				    height: 50px;
+				    padding: 10px;
+				    margin: 15px 0;
+				    border-radius: 100px;
+				    border: none;
+				    background-color: #ffba7d;
+				    color: #fff;
+				    cursor: pointer;
+				    font-size: 20px;
+				    letter-spacing: 3px;
+				}
+				
+				input::placeholder {
+				    color: #d9dbe8;
+				}
+				        input[type="text"],
+			input[type="password"] {
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            color: rgb(0, 0, 0);
+            border: 5px solid transparent;
+            background: rgba(255, 255, 255, .5);
+            border-radius: 100px;
+            padding: 5px 20px 0 20px;
+            transition: 0.3s;
+            font-size: 18px;
+            outline: none
+        }
+		
+		
+		
+		.footer {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    width: 100%;
+		    margin-top: 20px;
+		}
+		.Remember {
+		    opacity: 1;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    font-size: 18px;
+		    color: #7597ff;
+		}
+		
+		
+		input[type="checkbox"] {
+		    display: block;
+		    width: 25px;
+		    height: 25px;
+		    margin-right: 10px;
+		    background-color: #007bff;
+		}
+		
+		.register-btn {
+		    border: none;
+		    background-color: #ffffff00;
+		    color: #7597ff;
+		    font-size: 18px;
+		}
+		       .title {
+		            text-align: center; /* 标题文本居中 */
+		        }
+		        input[type="text"],
+		        input[type="password"],
+		        input[type="button"],
+		        button {
+		            display: block; /* 让这些输入框、按钮等元素占满一行，垂直排列，更整齐 */
+		            width: 100%; /* 宽度占满父元素，自适应父元素宽度 */
+		            margin-bottom: 10px; /* 元素之间添加一些间隔 */
+		            padding: 8px; /* 输入框等内部的内边距 */
+		            border: 1px solid #ccc; /* 边框样式 */
+		            border-radius: 3px; /* 圆角 */
+		        }
+				 .container {
+				            text-align: right;
+				        }
+						nav ul {
+						  list-style: none;
+						  display: grid;
+						  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 根据容器宽度自动调整列数，每列宽度范围如上述 */
+						  padding: 0;
+						  margin-left: -70px; /* 设置合适的负值，这里以 -20px 为例，可按需调整 */
+						}
+						
+						nav ul li {
+						  text-align: center;
+						}
+						
+						nav ul li a {
+						  text-decoration: none;
+						  color: inherit;
+						}
+						
+						
+						
+		.yejiao {
+			text-align: center;
+			background-color: #a76257;
+			height: 60px;
+			color: white;
+			padding-top: 10px;
+		}
+		.yejiao a{
+			color: white;
+			line-height: 30px;
+			letter-spacing: 2px;
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.yejiao p{
+			line-height: 30px;
+			letter-spacing: 2px;
+		}			
+		
+		</style>
+	</head>
+
+		<header>
+			<div class="left">
+				<img src="images/tubiao.png" height="100" width="auto" alt="">
+			</div>
+			<div class="right">
+				<input type="text" placeholder="请输入关键字">
+		<span>搜索</span>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="chanpintuijian.html">产品推荐</a></li>
+				<li><a href="gouwu.html">购物车</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li class="active"><a href="index.html">注册</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<div id="slideshow">
+				<ul id="imglist">
+					<li><img src="images/datu1.jpg" alt="" height="400"></li>
+					<li><img src="images/datu2.jpeg" alt=""height="400"></li>
+					<li><img src="images/datu3.png" alt="" height="400"></li>
+				</ul>
+				<ul id="dotlist">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<button id="pre"><</button>
+					<button id="next">></button>
+		</div>
+
+		<script src="js/lunbo.js"></script>
+
+		<div class="shell">
+		    <h2 class="title">登录</h2>
+		    <input type="text" id="username" placeholder="用户名">
+		    <input type="password" id="password" placeholder="密码">
+		    <input type="button" value="登录" id="loginBtn">
+		    <div class="footer">
+		        <div class="Remember">
+		            <input type="checkbox" id="rememberMe">
+		            <label for="rememberMe">记住我</label>
+		        </div>
+				 <div class="container">
+		        <button class="register-btn">去注册</button>
+		    </div>
+		</div>
+		<div class="yejaio">
+				<a href="about.html">关于我们</a>|<a href="mianzeshengming.html">免责声明</a>|<a href="yingsixieyi.html">隐私协议</a>|<a href="falvtiaokuan.html">法律条款</a>|<a href="zhuce.html">帮助中心</a>
+		</div>
+	
+		<script>
+		
+		    document.querySelector('.register-btn').addEventListener('click', function () {
+		        var title = document.querySelector('.title');
+		        var loginBtn = document.getElementById('loginBtn');
+		        var rememberMeLabel = document.querySelector('.Remember');
+		        var passwordBtn = document.querySelector('.register-btn');
+		        if (title.innerText === '登录') {
+		            title.innerText = '注册';
+		            loginBtn.value = '注册';
+		            rememberMeLabel.style.opacity = '0';
+		            passwordBtn.innerText = '去登录';
+		            document.getElementById('username').value = '';
+		            document.getElementById('password').value = '';
+		            document.getElementById('username').placeholder = '新用户名';
+		            document.getElementById('password').placeholder = '新密码';
+		            document.getElementById('password').type = 'password';
+		        } else {
+		            title.innerText = '登录';
+		            loginBtn.value = '登录';
+		            rememberMeLabel.style.opacity = '1';
+		            passwordBtn.innerText = '去注册';
+		            document.getElementById('username').placeholder = '用户名';
+		            document.getElementById('password').placeholder = '密码';
+		            document.getElementById('password').type = 'password';
+		        }
+		    });
+		
+		    document.getElementById('loginBtn').addEventListener('click', function () {
+		        var username = document.getElementById('username').value.trim();
+		        var password = document.getElementById('password').value.trim();
+		
+		        // 检查是否匹配预设值
+		        if ((username === 'root' && password === 'root') || (username === '123' && password === '321')) {
+		            // 正确用户名123 密码321 登录成功，跳转到 登录界面
+		            window.location.href = 'shouye.html';<!-- 登录成功后跳转的页面  -->
+		        } else {
+		            // 登录失败，弹出提示
+		            alert('用户名或密码错误');
+		        }
+		    });
+		
+		</script>
+		
+
+	</body>
+</html>

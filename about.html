@@ -1,0 +1,256 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 全局基础样式 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header,
+    nav,
+   .banner,
+   .box,
+   .footer {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* 头部样式 */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    header.left img {
+      height: 80px;
+      width: auto;
+    }
+
+    header.right {
+      display: flex;
+      align-items: center;
+    }
+
+    header.right input {
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    header.right span {
+      margin-left: 5px;
+    }
+
+    /* 导航栏样式 */
+   nav ul {
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* 根据容器宽度自动调整列数，每列宽度范围如上述 */
+     padding: 0;
+     margin-left: -70px; /* 设置合适的负值，这里以 -20px 为例，可按需调整 */
+   }
+   
+   nav ul li {
+     text-align: center;
+   }
+   
+   nav ul li a {
+     text-decoration: none;
+     color: inherit;
+   }
+   .banner {
+      position: relative;
+    }
+
+   .banner #slideshow #imglist li img {
+      width: 100%;
+      height: auto;
+    }
+
+   .banner button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 5px 10px;
+    }
+
+   .banner #pre {
+      left: 10px;
+    }
+
+   .banner #next {
+      right: 10px;
+    }
+
+    /* 关于我们内容区域样式 */
+   .about {
+      width: 100%;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      position: relative;
+      border: 1px solid #a76257;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+   .about div {
+      width: 100%;
+      padding: 10px;
+    }
+
+   .about video {
+      margin-top: 10px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+   .about h3 {
+      margin-top: 20px;
+      display: block;
+      padding: 8px 20px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+    }
+
+   .about p {
+      text-indent: 2em;
+      line-height: 25px;
+      padding: 10px;
+      font-family: "等线";
+      letter-spacing: 1px;
+    }
+
+   .about span {
+      font-size: 10px;
+      float: right;
+    }
+
+    /* 媒体查询，针对不同屏幕尺寸调整样式 */
+    /* 平板端（屏幕宽度在768px - 1024px之间） */
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      header.left img {
+        height: 60px;
+      }
+
+      nav ul li {
+        flex-basis: 18%;
+      }
+
+     .about video {
+        height: 300px;
+      }
+    }
+
+    /* 手机端（屏幕宽度小于768px） */
+    @media screen and (max-width: 767px) {
+      header {
+        flex-direction: column;
+      }
+
+      header.left img {
+        height: 50px;
+      }
+
+      header.right {
+        margin-top: 10px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      nav ul li {
+        flex-basis: 50%;
+        margin-bottom: 10px;
+      }
+
+     .about video {
+        height: 200px;
+      }
+
+     .about h3 {
+        font-size: 12px;
+      }
+
+     .about p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+		</style>
+	</head>
+
+	<body>
+
+		<header>
+			<div class="left">
+				<img src="images/tubiao.png" height="100" width="auto" alt="">
+			</div>
+			<div class="right">
+				<input type="text" placeholder="请输入关键字">
+				<span>搜索</span>
+			</div>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">首页</a></li>
+				<li><a href="chanpintuijian.html">产品推荐</a></li>
+				<li><a href="gouwu.html">购物车</a></li>
+				<li class="active"><a href="about.html">关于我们</a></li>
+				<li><a href="zhuce.html">注册</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<div id="slideshow">
+				<ul id="imglist">
+					<li><img src="images/datu1.jpg" alt="" height="400"></li>
+					<li><img src="images/datu2.jpeg" alt=""heigh="400"></li>
+					<li><img src="images/datu3.png" alt="" height="400"></li>
+				</ul>
+				<ul id="dotlist">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<button id="pre"><</button>
+					<button id="next">></button>
+		</div>
+		<div class="box">
+			<div class="about">
+				<h3>坚持健康</h3>
+				<p>鲜花饼是云南特色点心，为滇式月饼经典代表 。其诞生于清代，由一位制饼师傅创造，后成宫廷御点 。</p>
+
+				<div>
+				  <video src="video/xianhuabing.mp4" width="900" height="515" controls></video>
+				</div>
+				<p>鲜花饼以云南特有的食用玫瑰花为主要原料，搭配面粉、白糖、猪油等  。制作时，采摘含苞待放或刚开放的玫瑰花瓣，经筛选等处理成馅心，包上酥皮烘烤而成 。</p>
+				<h3>&nbsp;</h3>
+				<p>它色泽洁白，外皮酥脆，馅料清香，口感酥软，香甜不腻，带有淡淡花香  。鲜花饼营养丰富，玫瑰花有美容养颜、行气活血功效  。它不仅是美味点心，还可作伴手礼，适合在早餐、下午茶等场景享用  。</p>
+				<p style="text-align:right">公司邮箱:87654321@qq.com&nbsp;&nbsp;&nbsp;&nbsp;联系我们: 12345678</p>
+
+			</div>
+		</div>
+		<div class="footer">
+			<a href="about.html">关于我们</a>|<a href="mianzeshengming.html">免责声明</a>|<a href="yingsixieyi.html">隐私协议</a>|<a href="falvtiaokuan.html">法律条款</a>|<a href="zhuce.html">帮助中心</a>
+			
+		</div>
+		<script src="js/lunbo.js"></script>
+	</body>
+</html>
